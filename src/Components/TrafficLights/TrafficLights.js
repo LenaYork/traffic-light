@@ -1,4 +1,7 @@
 import React from 'react';
+
+import { Light } from './Light';
+
 import './TrafficLights.css';
 
 export class TrafficLights extends React.Component {
@@ -8,9 +11,23 @@ export class TrafficLights extends React.Component {
   } 
 
   render() {
-    return(
+    return (
       <div className='trafficLight'>
-        <p>Тут будуць кружочки</p>
+        <Light 
+          id='red'
+          color='red'
+          isActive={false}
+        />
+        <Light 
+          id='yellow'
+          color='yellow'
+          isActive={false}
+        />
+        <Light 
+          id='green'
+          color='green'
+          isActive={false}
+        />
       </div>
     )
   }

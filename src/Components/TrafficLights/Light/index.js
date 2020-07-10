@@ -1,1 +1,1 @@
-import * from './Light';
+export * from './Light';
