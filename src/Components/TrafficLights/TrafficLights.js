@@ -7,27 +7,34 @@ import './TrafficLights.css';
 export class TrafficLights extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
-  } 
+    this.state = {
+      activeLight: '',
+    };
+
+    this.handleClick = this.handleClick.bind(this);
+  }
+  
+  handleClick = (color) => {
+    this.setState({
+      activeLight: color,
+    })
+  }
+
+  renderLights(colors) {
+    return colors.map(color => (
+      <Light 
+        key={color}
+        color={color}
+        activeLight={this.state.activeLight}
+        handleClick={() => this.handleClick(color)}
+    />
+    ));
+  }
 
   render() {
     return (
       <div className='trafficLight'>
-        <Light 
-          id='red'
-          color='red'
-          isActive={false}
-        />
-        <Light 
-          id='yellow'
-          color='yellow'
-          isActive={false}
-        />
-        <Light 
-          id='green'
-          color='green'
-          isActive={false}
-        />
+        {this.renderLights(this.props.colors)}
       </div>
     )
   }
