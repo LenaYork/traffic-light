@@ -5,7 +5,7 @@ export function Light(props) {
     const { color, isActive } = props;
     return(
         <div
-            className={`light ${isActive ? color : ''}`}
+            className={`light${isActive ? color : ''}`}
         />
     )
 }
