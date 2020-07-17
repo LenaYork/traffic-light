@@ -20,8 +20,8 @@ export class TrafficLights extends React.Component {
     })
   }
 
-  renderLights(colors) {
-    return colors.map(color => (
+  renderLights() {
+    return this.props.colors.map(color => (
       <Light 
         key={color}
         color={color}
@@ -34,7 +34,7 @@ export class TrafficLights extends React.Component {
   render() {
     return (
       <div className='trafficLight'>
-        {this.renderLights(this.props.colors)}
+        {this.renderLights()}
       </div>
     )
   }
