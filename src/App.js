@@ -5,12 +5,31 @@ import {Control} from './Components/Control';
 
 function App() {
 
-  const text = [
-    '1st button', '2nd button', '3rd button', '4th button'
-  ]
+  // const text = [
+  //   '1st button', '2nd button', '3rd button', '4th button'
+  // ]
 
-  const buttonColors = [
-    'pink', 'purple', 'silver', 'orange'
+  // const buttonColors = [
+  //   'pink', 'purple', 'silver', 'orange'
+  // ]
+
+  const buttonConfig = [
+    {
+      text: '1st button',
+      color: 'pink'
+    },
+    {
+      text: '2nd button',
+      color: 'purple'
+    },
+    {
+      text: '3rd button',
+      color: 'silver'
+    },
+    {
+      text: '4th button',
+      color: 'orange'
+    },
   ]
 
   
@@ -22,7 +41,7 @@ return (
      </header>
      <div class="main">
       <TrafficLights />
-      <Control text={text} color={buttonColors}/>
+      <Control buttons={buttonConfig}/>
     </div>
     </div>
   );

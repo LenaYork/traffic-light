@@ -17,9 +17,11 @@ export class Control extends React.Component {
         console.log(props);
     }
 
-//    renderButtonElements = () => this.props.text.map(elem => <Button text = {elem} />)
-    renderButtonElements = () => this.props.color.map(elem => <Button className = {elem} />);
-    
+//    renderButtonElements = () => this.props.text.map(elem => <Button text={elem} />)
+    // renderButtonElements = () => this.props.color.map(elem => <Button color={elem} text="bla"/>);
+    renderButtonElements = () => this.props.buttons.map(
+        elem => <Button color={elem.color} text={elem.text} />
+    );
 
     render() {
     return(
