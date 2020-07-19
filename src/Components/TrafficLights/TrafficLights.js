@@ -1,7 +1,5 @@
 import React from 'react';
-
 import { Light } from './Light';
-
 import './TrafficLights.css';
 
 export class TrafficLights extends React.Component {
