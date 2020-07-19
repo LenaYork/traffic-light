@@ -1,10 +1,48 @@
 import React from 'react';
 import './App.css';
+import {TrafficLights} from './Components/TrafficLights';
+import {Control} from './Components/Control';
 
 function App() {
-  return (
+
+  // const text = [
+  //   '1st button', '2nd button', '3rd button', '4th button'
+  // ]
+
+  // const buttonColors = [
+  //   'pink', 'purple', 'silver', 'orange'
+  // ]
+
+  const buttonConfig = [
+    {
+      text: '1st button',
+      color: 'pink'
+    },
+    {
+      text: '2nd button',
+      color: 'purple'
+    },
+    {
+      text: '3rd button',
+      color: 'silver'
+    },
+    {
+      text: '4th button',
+      color: 'orange'
+    },
+  ]
+
+  
+
+return (
     <div className="App">
-     <h1>Traffic Light</h1>
+      <header>
+        <h1>Traffic Light</h1>
+     </header>
+     <div class="main">
+      <TrafficLights />
+      <Control buttons={buttonConfig}/>
+    </div>
     </div>
   );
 }
